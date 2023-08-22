@@ -73,8 +73,8 @@ pipeline {
                 artifacts: [
                     [artifactId: 'vprofile',
                      classifier: '',
-                     file: 'target/vprofile-v2.war',
-                     type: 'war']
+                     file: 'target/spring-boot-mongo.jar',
+                     type: 'jar']
                 ]
             )
            }
