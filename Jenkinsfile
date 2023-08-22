@@ -66,12 +66,12 @@ pipeline {
                 nexusVersion: 'nexus3',
                 protocol: 'http',
                 nexusUrl: "${NEXUSIP}:${NEXUSPORT}",
-                groupId: 'com.visualpathit',
+                groupId: 'com.mt',
                 version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                 repository: "${RELEASE_REPO}",
                 credentialsId: "${NEXUS_LOGIN}",
                 artifacts: [
-                    [artifactId: 'vprofile',
+                    [artifactId: 'spring-boot-mongo',
                      classifier: '',
                      file: 'target/spring-boot-mongo.jar',
                      type: 'jar']
