@@ -65,7 +65,7 @@ pipeline {
             nexusArtifactUploader(
                 nexusVersion: 'nexus3',
                 protocol: 'http',
-                nexusURl: "${NEXUSIP}:${NEXUSPORT}",
+                nexusUrl: "${NEXUSIP}:${NEXUSPORT}",
                 groupId: 'com.visualpathit',
                 version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                 repository: "${RELEASE_REPO}",
@@ -88,7 +88,7 @@ pipeline {
                 colorized        : true,
                 credentialsId    : 'applogin',
                 disableHostKeyChecking: true,
-                extravars         : [
+                extraVars         : [
                     USER: "admin",
                     PASS: "Password",
                     nexusip: "34.232.105.51",
