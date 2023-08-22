@@ -9,15 +9,16 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "34.232.105.51:8081"
-        NEXUS_IP = "34.232.105.51"
-        NEXUS_PORT = "8081"
+        NEXUS_URL = "44.199.217.199:8081"
+        NEXUS_REPOSITORY = "Maven-Demo"
+	NEXUS_REPO_ID    = "Maven-Demo"
+        NEXUS_CREDENTIAL_ID = credentials('nexuslogin')
+	NEXUSIP   = "44.199.217.199"
+	NEXUSPORT = "8081"
         NEXUS_USER = "admin"
-        NEXUS_PASS = "Password"
-        NEXUS_REPOSITORY = "Demo"
-	    NEXUS_REPO_ID    = "Demo"
-        NEXUS_LOGIN = "nexuslogin"
+	NEXUS_PASS = "Password"
         ARTVERSION = "${env.BUILD_ID}"
+        RELEASE_REPO = "Maven-Demo"
     }
 	
     stages{
