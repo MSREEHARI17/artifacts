@@ -69,7 +69,7 @@ pipeline {
                 groupId: 'com.mt',
                 version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                 repository: "${RELEASE_REPO}",
-                credentialsId: "${NEXUS_LOGIN}",
+                credentialsId: "${NEXUS_CREDENTIAL_ID}",
                 artifacts: [
                     [artifactId: 'spring-boot-mongo',
                      classifier: '',
